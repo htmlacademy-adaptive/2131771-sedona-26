@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>СЕДОНА — небольшой городок в АРИЗОНЕ, заслуживающий большего!</title>
+  <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body class="page__body">
@@ -15,10 +16,12 @@
     </a>
     <nav class="main-nav">
       <div class="main-nav__wrapper">
-        <button class="main-nav__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
-        <ul class="main-nav-list">
+        <div class="main-nav__button_wrapper">
+          <button class="main-nav__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+        </div>
+        <ul class="visually-hidden main-nav-list">
           <li class="main-nav-list__item">
             <a class="main-nav-list__link">Главная</a>
           </li>
@@ -35,23 +38,24 @@
       </div>
     </nav>
   </header>
+
   <main class="page__main">
     <section class="welcome">
-      <div class="welcome__wrapper">
         <img class="welcome__image" src="img/welcome-to-sedona.svg" width="282" height="214" alt="Welcome to the gorgeous Sedona. Because the Grand Canyon sucks">
-      </div>
       <h1 class="welcome__headline">СЕДОНА — небольшой городок в АРИЗОНЕ, заслуживающий большего!</h1>
     </section>
 
     <section class="advantages">
       <div class="advantages__wrapper">
-        <h2 class="visually-hidden">Преимущества Седоны</h2>
+        <h2 class="advantages_headline">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</h2>
+
         <ol class="advantages__list">
           <li class="advantages-item">
             <h2 class="advantages-item__headline advantages-item__headline--block-with-image">Настоящий городок</h2>
-            <p class="advantages-item__number advantages-item__number--block-with-image">№ 1</p>
+            <p class="advantages-item__number advantages-item__number--block-with-image"></p>
             <p class="advantages-item__text advantages-item__text--block-with-image">Седона не аттракцион для турисов, там течет своя жизнь</p>
             <img class="advantages-item__image" src="/img/photo-city.jpg" width="238" height="193" alt="Достопримечательность Седоны">
+
             <ul class="advantages-inner-list">
               <li class="advantages-inner-list__item">
                 <img class="advantages-inner-list__icon" src="/img/house-icon.svg" width="40" height="40" alt="Иконка дом">
@@ -99,12 +103,17 @@
         <h2 class="visually-hidden">Выбор гостиницы</h2>
         <h2 class="find-hotel__headline">Заинтересовались?</h2>
         <p class="find-hotel__text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-        <button class="find-hotel__button" type="button">Найти гостиницу</button>
+        <div class="find-hotel__button-wrapper">
+          <button class="find-hotel__button" type="button">Найти гостиницу</button>
+        </div>
       </div>
     </section>
     <section class="map">
       <h2 class="visually-hidden">Карта проезда в Седону</h2>
-    </section>
+      <div class="map__wrapper">
+        <a href="https://yandex.ru/maps/?um=constructor%3A9cb5a5dd70cc0cea4cf36595b1698d84ff6ba3fb2375b369149319407e5eb0fe&amp;source=constructorStatic" target="_blank"><img src="https://api-maps.yandex.ru/services/constructor/1.0/static/?um=constructor%3A9cb5a5dd70cc0cea4cf36595b1698d84ff6ba3fb2375b369149319407e5eb0fe&amp;width=320&amp;height=350&amp;lang=ru_RU" alt="" style="border: 0;" /></a>
+      </div>
+      </section>
   </main>
   <footer class="footer">
       <div class="footer__wrapper">
@@ -128,8 +137,8 @@
         </ul>
       </div>
       <div class="developed-by">
-        <p class="developed-by__text">Разработано</p>
-        <a class="developed-by__link" href="https://htmlacademy.ru">
+        <a class="developed-by__link" href="https://htmlacademy.ru"></a>
+          <p class="developed-by__text">Разработано</p>
           <img class="developed-by__image" src="/img/htmlacademy-logo.svg" width="27" height="34" alt="Логотип HTMLAcademy">
         </a>
       </div>

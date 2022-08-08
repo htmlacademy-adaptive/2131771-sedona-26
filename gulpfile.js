@@ -36,7 +36,7 @@ const server = (done) => {
 
 const watcher = () => {
   gulp.watch('source/less/**/*.less', gulp.series(styles));
-  gulp.watch('source/*.html').on('change', browser.reload);
+  gulp.watch('mpmsource/*.html').on('change', browser.reload);
 }
 
 
