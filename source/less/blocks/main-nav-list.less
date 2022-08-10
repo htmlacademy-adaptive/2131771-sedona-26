@@ -4,20 +4,19 @@
   z-index: 1;
   position: absolute;
   top: -17px;
-  left: 0px;
-  background-color: #81B3D2;
+  left: 0;
+  background-color: #81b3d2;
+  display: none;
 }
 
-.main-nav-list::after { // Почему не видно крестик?
+.main-nav-list::after {
   width: 220px;
   height: 220px;
   position: absolute;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
   z-index: 2;
-  background-image: url"/img/icon-cross.svg";
-  background-color: red;
-  border: 1px solid red;
+  background-image: url("img/icon-cross.svg");
 }
 
 .main-nav-list__item {
@@ -43,4 +42,8 @@
 .main-nav-list__link {
   color: #ffffff;
   text-decoration: none;
+}
+
+.main-nav-list--active {
+  display: block;
 }

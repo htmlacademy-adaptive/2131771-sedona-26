@@ -1,27 +1,27 @@
 .welcome {
   width: 320px;
   margin: 0 auto;
-  background-image: url("/img/header-backgound.jpg");
+  background-image: url("img/header-backgound.jpg");
   background-repeat: no-repeat;
   text-align: center;
 }
 
 .welcome__image {
+  position: relative;
   margin-top: 90px;
   margin-bottom: 90px;
-  position: relative;
 }
 
 .welcome__image::after {
+  width: 320px;
+  height: 37px;
   position: absolute;
-  top: 0px;
-  left: 0px;
-  background-color: #ffffff;
-  clip: rect(0px, 300px, 20px); //Почему не работает?
+  top: 0;
+  left: 0;
+  background-image: url("img/white-triangle.svg");
 }
 
 .welcome__headline {
-  font-family: 'PT Sans';
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
