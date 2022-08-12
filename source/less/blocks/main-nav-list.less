@@ -6,17 +6,6 @@
   top: -17px;
   left: 0;
   background-color: #81b3d2;
-  display: none;
-}
-
-.main-nav-list::after {
-  width: 220px;
-  height: 220px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  background-image: url("img/icon-cross.svg");
 }
 
 .main-nav-list__item {
@@ -26,17 +15,13 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
-  margin-top: 17px;
-  margin-bottom: 12px;
+  padding-top: 17px;
+  padding-bottom: 12px;
   color: #ffffff;
 }
 
-.main-nav-list__item:not(:first-child)::before {
-  width: 320px;
-  height: 1px;
-  display: block;
-  background-color: #678fa8;
-  content: "";
+.main-nav-list__item:nth-last-child(n+2) {
+  border-bottom: 1px solid #678fa8;
 }
 
 .main-nav-list__link {
@@ -46,4 +31,8 @@
 
 .main-nav-list--active {
   display: block;
+}
+
+.main-nav-list--not-active {
+  display: none;
 }
