@@ -1,3 +1,4 @@
+/* stylelint-disable */
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -304,16 +305,17 @@ template {
 [hidden] {
   display: none;
 }
+/* stylelint-enable */
 @font-face {
   font-family: "PT Sans";
-  src: url("/fonts/ptsans.woff2") format("woff2"), url("/fonts/ptsans.woff") format("woff");
+  src: url("../fonts/ptsans.woff2") format("woff2"), url("../fonts/ptsans.woff") format("woff");
   font-style: normal;
   font-weight: 400;
   font-display: swap;
 }
 @font-face {
   font-family: "PT Sans";
-  src: url("/fonts/ptsansbold.woff2") format("woff2"), url("/fonts/ptsansbold.woff") format("woff");
+  src: url("../fonts/ptsansbold.woff2") format("woff2"), url("../fonts/ptsansbold.woff") format("woff");
   font-style: normal;
   font-weight: 700;
   font-display: swap;
@@ -345,7 +347,7 @@ template {
   margin: 20px;
   top: 0;
   left: 258px;
-  background-image: url("/img/icon-menu-burger.svg");
+  background-image: url("../img/icon-menu-burger.svg");
   border: 0;
   background-color: #ffffff;
   cursor: pointer;
@@ -370,7 +372,7 @@ template {
   padding-bottom: 12px;
   color: #ffffff;
 }
-.main-nav-list__item:nth-last-child(n+2) {
+.main-nav-list__item:not(:last-child) {
   border-bottom: 1px solid #678fa8;
 }
 .main-nav-list__link {
@@ -396,7 +398,7 @@ template {
 .welcome {
   width: 320px;
   margin: 0 auto;
-  background-image: url("/img/header-background.jpg");
+  background-image: url("../img/header-background.jpg");
   background-repeat: no-repeat;
   text-align: center;
 }
@@ -411,7 +413,7 @@ template {
   height: 37px;
   top: 0;
   left: 0;
-  background-image: url("/img/white-triangle.svg");
+  background-image: url("../img/white-triangle.svg");
   content: "";
 }
 .welcome__headline {
