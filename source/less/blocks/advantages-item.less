@@ -10,12 +10,17 @@
   text-transform: uppercase;
   margin: 0;
   padding-top: 29px;
+
+  @media (min-width: @tablet-width) or (min-width: @tablet-width) {
+    font-size: 21px;
+  }
 }
 
 .advantages-item__headline--block-with-image,
 .advantages-item__number--block-with-image,
 .advantages-item__text--block-with-image {
   background-color: #81b3d2;
+  color: #ffffff;
 }
 
 .advantages-item__number {
@@ -44,4 +49,56 @@
   width: 320px;
   height: 100%;
   background-color: #81b3d2;
+
+  @media (min-width: @tablet-width) {
+    content: url("../img/photo-city-tablet.jpg");
+    width: 512px;
+    height: 256px;
+    padding-top: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    content: url("../img/photo-city-desktop.jpg");
+    width: 800px;
+    height: 256px;
+    padding-top: 0;
+  }
+}
+
+.advantages-item--image {
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
+}
+
+.advantages-item___image-left {
+  @media (min-width: @tablet-width) or (min-width: @desktop-width) {
+    order: -1;
+  }
+}
+
+.advantages-item__text-wrpapper {
+  @media (min-width: @tablet-width) {
+    background-color: #81b3d2;
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-color: #81b3d2;
+    flex-direction: column;
+    padding: 28px;
+  }
+}
+
+.advantages-item__no-image-wrpapper {
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
+
+  @media (min-width: @desktop-width) {
+    gap: 20px;
+    background-color: #eeeeee;
+    justify-content: center;
+  }
 }
