@@ -1,9 +1,7 @@
 .advantages-inner-list {
-  padding-top: 23px;
-  padding-left: 15px;
-  padding-bottom: 40px;
+  padding: 23px 0 40px 15px;
 
-  @media (min-width: @tablet-width) or (min-width: @desktop-width) {
+  @media (min-width: @tablet-width) {
     display: flex;
   }
 }
@@ -14,7 +12,7 @@
   grid-template-rows: repeat(3, auto);
   list-style-type: none;
 
-  @media (min-width: @tablet-width) or (min-width: @desktop-width) {
+  @media (min-width: @tablet-width) {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -30,7 +28,7 @@
   padding-top: 10px;
   padding-left: 12px;
 
-  @media (min-width: @tablet-width) or (min-width: @tablet-width) {
+  @media (min-width: @tablet-width) {
     font-size: 21px;
     padding-left: 0;
     padding-top: 26px;
@@ -38,19 +36,16 @@
 }
 
 .advantages-inner-list__text {
-  font-weight: 400;
   font-size: 14px;
   line-height: 21px;
   text-transform: uppercase;
   margin: 0;
-  padding-top: 29px;
-  padding-left: 12px;
-  padding-bottom: 30px;
+  padding: 29px 0 30px 12px;
   grid-column-start: 2;
 }
 
 .advantages-inner-list__icon {
-  @media (min-width: @tablet-width) or (min-width: @desktop-width) {
+  @media (min-width: @tablet-width) {
     width: 75px;
     height: 75px;
   }
