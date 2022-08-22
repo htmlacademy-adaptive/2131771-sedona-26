@@ -1,12 +1,8 @@
-.main-nav {
-  position: relative;
-}
-
 .main-nav__wrapper {
   display: flex;
   justify-content: right;
-  width: 320px;
-  height: 56px;
+  position: relative;
+  margin: 0 auto;
 }
 
 .main-nav__toggle {
@@ -20,4 +16,8 @@
   border: 0;
   background-color: #ffffff;
   cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }

@@ -1,11 +1,29 @@
 .main-header {
+  grid-row-start: 1;
   width: 320px;
-  margin: 0 auto;
+  height: 56px;
   position: relative;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+  }
 }
 
 .main-header__logo {
   position: absolute;
   top: 0;
   left: 67px;
+
+  @media (min-width: @tablet-width) {
+    left: 291px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 508px;
+  }
 }
