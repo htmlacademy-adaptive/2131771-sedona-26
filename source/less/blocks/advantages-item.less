@@ -9,11 +9,11 @@
   line-height: 26px;
   text-transform: uppercase;
   margin: 0;
-  padding-top: 29px;
+  padding-top: 27px;
+}
 
-  @media (min-width: @tablet-width) {
-    font-size: 21px;
-  }
+@media (min-width: @tablet-width) {
+  font-size: 21px;
 }
 
 .advantages-item__headline--block-with-image,
@@ -21,6 +21,7 @@
 .advantages-item__text--block-with-image {
   background-color: #81b3d2;
   color: #ffffff;
+  font-weight: 700;
 }
 
 .advantages-item__number {
@@ -35,20 +36,55 @@
   line-height: 21px;
   text-transform: uppercase;
   margin: 0;
-  padding-top: 29px;
+  padding-top: 28px;
 }
 
 .advantages-item__text:nth-last-child(1) {
   padding-bottom: 28px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 0;
+  }
+}
+
+.advantages-item__headline.advantages-item__headline--block-with-image {
+  padding-top: 40px;
 }
 
 .advantages-item__image {
-  width: 320px;
-  height: 100%;
-  background-color: #81b3d2;
+  @media (min-width: @tablet-width) {
+    width: 512px;
+    height: 256px;
+    padding-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 800px;
+  }
 }
 
 .advantages-item--image {
+  position: relative;
+
+  &:nth-child(1)::before {
+    position: absolute;
+    width: 320px;
+    height: 57px;
+    top: -21px;
+    left: 0;
+    background-image: url("../img/white-triangle-advantages.svg");
+    background-repeat: no-repeat;
+    content: "";
+
+    @media (min-width: @tablet-width) {
+      background-image: none;
+    }
+
+    @media (min-width: @desktop-width) {
+      background-image: none;
+    }
+  }
+
   @media (min-width: @tablet-width) {
     display: flex;
     width: 100%;
@@ -62,9 +98,25 @@
 }
 
 .advantages-item--no-image {
+  &::after {
+    content: "";
+    display: block;
+    align-items: center;
+    width: 284px;
+    height: 1px;
+    background-color: #d6d6d6;
+    margin: 0 auto;
+  }
+
   @media (min-width: @tablet-width) {
-    width: 33%;
+    width: 255px;
     flex-grow: 1;
+    padding-bottom: 63px;
+    padding-top: 42px;
+
+    &::after {
+      display: none;
+    }
   }
 }
 
@@ -73,10 +125,12 @@
     background-color: #81b3d2;
     flex-direction: column;
     padding: 15px;
-    width: 100%;
+    width: 226px;
+    height: 200px;
   }
 
   @media (min-width: @desktop-width) {
     padding: 28px;
+    width: 353px;
   }
 }

@@ -1,11 +1,16 @@
 .developed-by {
   display: flex;
-  align-items: center;
   justify-content: center;
   width: 320px;
   margin-top: 47px;
   text-decoration: none;
   color: #000000;
+
+  @media (min-width: @tablet-width) {
+    width: 33%;
+    align-items: center;
+    justify-content: right;
+  }
 }
 
 .developed-by__text {

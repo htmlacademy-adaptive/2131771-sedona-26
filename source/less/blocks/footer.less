@@ -1,14 +1,13 @@
 .footer__wrapper {
-  text-align: center;
-  justify-content: center;
   width: 320px;
   margin: 0 auto;
 
   @media (min-width: @tablet-width) {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     width: @tablet-width;
+    display: flex;
+    flex-grow: 1;
+    align-items: baseline;
+    justify-content: space-between;
   }
 
   @media (min-width: @desktop-width) {
@@ -17,19 +16,22 @@
 }
 
 .footer {
-  grid-row-start: 5;
-
   @media (min-width: @tablet-width) {
     margin: 36px 45px;
   }
 }
 
 .footer__hashtag {
+  text-align: center;
   font-style: normal;
   font-weight: 700;
   font-size: 21px;
   line-height: 26px;
   text-transform: uppercase;
-  text-align: center;
   margin-top: 40px;
+
+  @media (min-width: @tablet-width) {
+    width: 33%;
+    justify-content: left;
+  }
 }
