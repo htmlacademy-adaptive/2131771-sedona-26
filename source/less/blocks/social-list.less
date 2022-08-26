@@ -1,8 +1,13 @@
 .social-list {
   padding: 0;
   display: flex;
+  justify-content: center;
   gap: 6px;
   margin: 0 80px;
+
+  @media (min-width: @tablet-width) {
+    width: 33%;
+  }
 }
 
 .social-list__item {

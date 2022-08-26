@@ -1,8 +1,11 @@
 .advantages-inner-list {
-  padding: 23px 0 40px 15px;
+  margin: 28px 19px 20px 17px;
+  text-align: left;
 
   @media (min-width: @tablet-width) {
     display: flex;
+    margin: 60px 33px;
+    padding: 0;
   }
 }
 
@@ -16,6 +19,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-right: 45px;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }
 
@@ -40,8 +48,14 @@
   line-height: 21px;
   text-transform: uppercase;
   margin: 0;
-  padding: 29px 0 30px 12px;
+  padding: 27px 0 43px 12px;
   grid-column-start: 2;
+
+  @media (min-width: @tablet-width) {
+    text-align: center;
+    padding-bottom: 0;
+    padding-left: 0;
+  }
 }
 
 .advantages-inner-list__icon {

@@ -1,11 +1,16 @@
 .map {
-  grid-row-start: 5;
+  margin: 0 auto;
   margin-top: 50px;
   display: flex;
   justify-content: center;
 
   @media (min-width: @tablet-width) {
+    width: 768px;
     margin-top: 58px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1200px;
   }
 }
 
