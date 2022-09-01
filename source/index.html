@@ -7,6 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>СЕДОНА — небольшой городок в АРИЗОНЕ, заслуживающий большего!</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon.ico"><!-- 32×32 -->
+  <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="images/favicons/apple.png"> <!-- 180×180 -->
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 
 <body class="page__body">
@@ -52,7 +56,11 @@
               <p class="advantages-item__number advantages-item__number--block-with-image">— № 1 —</p>
               <p class="advantages-item__text advantages-item__text--block-with-image">Седона не аттракцион для турисов, там течет своя жизнь</p>
             </div>
-            <img class="advantages-item__image" src="img/photo-city.jpg" width="320" height="262" alt="Достопримечательность Седоны">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-bridge-desktop.jpg 1x, img/photo-bridge-desktop@2x.jpg 2x" width="800" height="262" alt="Достопримечательность Седоны">
+              <source media="(min-width: 768px)" srset="img/photo-bridge-tablet.jpg 1x, img/photo-bridge-tablet@2x.jpg 2x" width="512" height="262" alt="Достопримечательность Седоны">
+              <img class="advantages-item__image" srcset="img/photo-bridge.jpg 1x, img/photo-bridge@2x.jpg 2x" width="320" height="262" alt="Достопримечательность Седоны">
+            </picture>
           </li>
           <li class="advantages-item">
               <ul class="advantages-inner-list">
@@ -79,19 +87,23 @@
               <p class="advantages-item__number advantages-item__number--block-with-image">— № 2 —</p>
               <p class="advantages-item__text advantages-item__text--block-with-image">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
             </div>
-            <img class="advantages-item__image advantages-item___image-left" src="img/photo-bridge.jpg" width="320" height="262" alt="Достопримечательность Седоны">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-city-desktop.jpg 1x, img/photo-city-desktop@2x.jpg 2x" width="800" height="262" alt="Достопримечательность Седоны">
+              <source media="(min-width: 768px)" srset="img/photo-city-tablet.jpg 1x, img/photo-city-tablet@2x.jpg 2x" width="512" height="262" alt="Достопримечательность Седоны">
+              <img class="advantages-item__image" srcset="img/photo-city.jpg 1x, img/photo-city@2x.jpg 2x" width="320" height="262" alt="Достопримечательность Седоны">
+            </picture>
           </li>
-            <li class="advantages-item advantages-item--no-image">
+            <li class="advantages-item advantages-item--no-image advantages-item--first-no-image">
               <h2 class="advantages-item__headline">Небольшая площадь</h2>
               <p class="advantages-item__number">— № 3 —</p>
               <p class="advantages-item__text">Все интересные места находятся очень близко</p>
             </li>
-            <li class="advantages-item advantages-item--no-image">
+            <li class="advantages-item advantages-item--no-image advantages-item--second-no-image">
               <h2 class="advantages-item__headline">Красивая дорога</h2>
               <p class="advantages-item__number">- № 4 -</p>
-              <p class="advantages-item__text">Ехать в Седону из Лас-Вегаса совсем не скучно</p>
+              <p class="advantages-item__text advantages-item--second-text">Ехать в Седону из Лас-Вегаса совсем не скучно</p>
             </li>
-            <li class="advantages-item advantages-item--no-image">
+            <li class="advantages-item advantages-item--no-image advantages-item--third-no-image">
               <h2 class="advantages-item__headline">Мало туристов</h2>
               <p class="advantages-item__number">- № 5 -</p>
               <p class="advantages-item__text">Большинство едет в гранд каньон и толпится там</p>
@@ -121,17 +133,24 @@
         <ul class="social-list">
           <li class="social-list__item">
             <a class="social-list__link" href="#">
-              <img class="social-list__image" src="img/vk-icon.svg" width="24" height="24" alt="VK">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M23.45 5.948C23.616 5.402 23.45 5 22.655 5H20.03C19.362 5 19.054 5.347 18.887 5.73C18.887 5.73 17.552 8.926 15.661 11.002C15.049 11.604 14.771 11.795 14.437 11.795C14.27 11.795 14.019 11.604 14.019 11.057V5.948C14.019 5.292 13.835 5 13.279 5H9.151C8.734 5 8.483 5.304 8.483 5.593C8.483 6.214 9.429 6.358 9.526 8.106V11.904C9.526 12.737 9.373 12.888 9.039 12.888C8.149 12.888 5.984 9.677 4.699 6.003C4.45 5.288 4.198 5 3.527 5H0.9C0.15 5 0 5.347 0 5.73C0 6.412 0.89 9.8 4.145 14.281C6.315 17.341 9.37 19 12.153 19C13.822 19 14.028 18.632 14.028 17.997V15.684C14.028 14.947 14.186 14.8 14.715 14.8C15.105 14.8 15.772 14.992 17.33 16.467C19.11 18.216 19.403 19 20.405 19H23.03C23.78 19 24.156 18.632 23.94 17.904C23.702 17.18 22.852 16.129 21.725 14.882C21.113 14.172 20.195 13.407 19.916 13.024C19.527 12.533 19.638 12.314 19.916 11.877C19.916 11.877 23.116 7.451 23.449 5.948H23.45Z" fill="white"/>
+                </svg>
             </a>
           </li>
           <li class="social-list__item">
             <a class="social-list__link" href="#">
-              <img class="social-list__image" src="img/telegram-icon.svg" width="24" height="24" alt="Telegram">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22.4393 4.62225L19.2705 19.566C19.0313 20.6205 18.408 20.883 17.5223 20.3865L12.6938 16.8285L10.3643 19.0695C10.1063 19.3275 9.891 19.5428 9.39375 19.5428L9.74101 14.6258L18.6893 6.54C19.0785 6.1935 18.6045 6.00075 18.0848 6.348L7.02225 13.314L2.25976 11.823C1.22401 11.4998 1.20526 10.7873 2.47576 10.29L21.1035 3.11325C21.966 2.79 22.7205 3.30525 22.4393 4.623V4.62225Z" fill="white"/>
+                </svg>
             </a>
           </li>
           <li class="social-list__item">
             <a class="social-list__link" href="#">
-              <img class="social-list__image" src="img/youtube-icon.svg" width="24" height="24" alt="YouTube">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.1813 5H4.81331C3.30618 5 2 6.3 2 7.8V16.1C2 17.7 3.30618 19 4.81331 19H19.1813C20.7889 19 21.9946 17.7 21.9946 16.2V7.8C22.095 6.3 20.7889 5 19.1813 5ZM9.03326 15.4V8.6L15.8656 12L9.03326 15.4Z" fill="white"/>
+                </svg>
+
             </a>
           </li>
         </ul>
