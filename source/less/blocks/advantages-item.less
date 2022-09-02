@@ -1,4 +1,5 @@
 .advantages-item {
+  width: @mobile-width;
   background-color: #eeeeee;
   text-align: center;
 }
@@ -9,7 +10,6 @@
   line-height: 26px;
   text-transform: uppercase;
   margin: 0;
-  padding-top: 27px;
 }
 
 @media (min-width: @tablet-width) {
@@ -35,8 +35,7 @@
   line-height: 21px;
   text-transform: uppercase;
   margin-top: 28px;
-  padding-bottom: 28px;
-  margin-bottom: 0;
+  margin-bottom: 30px;
 }
 
 .advantages-item__image {
@@ -97,30 +96,42 @@
   }
 
   @media (min-width: @tablet-width) {
-    width: 255px;
+    width: 33%;
     flex-grow: 1;
-    padding-bottom: 63px;
-    padding-top: 42px;
+    padding-bottom: 47px;
+    padding-top: 47px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 68px;
   }
 }
 
-.advantages-item--first-no-image {
+.advantages-item--1 {
+  width: 240px;
+  display: inline-block;
+  text-align: center;
+
   @media (min-width: @tablet-width) {
-    padding-left: 33px;
-    width: 189px;
+    width: 177px;
+    display: inline-block;
+    text-align: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 290px;
   }
 }
 
-.advantages-item--second-no-image {
-  @media (min-width: @tablet-width) {
-    padding-left: 90px;
-    width: 162px;
-  }
-}
+.advantages-item--2 {
+  width: 235px;
+  display: inline-block;
+  text-align: center;
 
-.advantages-item--second-text {
   @media (min-width: @tablet-width) {
-    width: 148px;
+    width: 138px;
+    display: inline-block;
+    text-align: center;
   }
 
   @media (min-width: @desktop-width) {
@@ -128,11 +139,30 @@
   }
 }
 
-.advantages-item--third-no-image {
+.advantages-item--3 {
+  width: 255px;
+  display: inline-block;
+  text-align: center;
+
   @media (min-width: @tablet-width) {
-    padding-left: 70px;
-    padding-right: 40px;
-    width: 175px;
+    width: 135px;
+    display: inline-block;
+    text-align: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 265px;
+  }
+}
+
+.advantages-item__headline-1-2-3 {
+  margin-top: 26px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 0;
+    width: 100px;
+    display: inline-block;
+    text-align: center;
   }
 }
 
