@@ -9,6 +9,7 @@ import htmlmin from 'gulp-htmlmin';
 import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgmin';
 import svgstore from 'gulp-svgstore';
+import del from 'del';
 import browser from 'browser-sync';
 
 
@@ -24,7 +25,6 @@ export const styles = () => {
       csso()
     ]))
     .pipe(rename('style.min.css'))
-    .pipe(gulp.dest('source/css', { sourcemaps: '.' }))
     .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
     .pipe(browser.stream());
 }
@@ -92,6 +92,12 @@ const copy = (done) => {
   done();
 }
 
+// Clean
+
+export const clean = () => {
+  return del('build');
+};
+
 // Server
 
 const server = (done) => {
@@ -116,6 +122,7 @@ const watcher = () => {
 // Build
 
 export const build = gulp.series(
+  clean,
   copy,
   optimizeImages,
   gulp.parallel(
