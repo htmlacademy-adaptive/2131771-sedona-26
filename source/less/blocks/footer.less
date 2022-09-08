@@ -1,7 +1,4 @@
 .footer__wrapper {
-  width: 320px;
-  margin: 0 auto;
-
   @media (min-width: @tablet-width) {
     width: @tablet-width;
     display: flex;
@@ -16,8 +13,18 @@
 }
 
 .footer {
+  width: 320px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  box-shadow: 0 10px 15px rgba(0, 1, 1, 0.2);
+
   @media (min-width: @tablet-width) {
-    margin: 36px 45px;
+    width: @tablet-width;
+    padding: 36px auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
   }
 }
 
@@ -32,6 +39,7 @@
 
   @media (min-width: @tablet-width) {
     width: 33%;
+    flex-grow: 1;
     text-align: left;
   }
 }
