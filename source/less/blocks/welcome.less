@@ -5,6 +5,7 @@
   text-align: center;
   background-image: url("../img/welcome-background.jpg");
   background-repeat: no-repeat;
+  box-shadow: 0 0 15px rgba(0, 1, 1, 0.2);
 
   @supports (background-image: url("../img/welcome-background.webp")) {
     background-image: url("../img/welcome-background.webp");
@@ -20,7 +21,7 @@
   }
 
   @media (min-width: @tablet-width) {
-    width: 768px;
+    width: @tablet-width;
     height: 518px;
     background-image: url("../img/welcome-background-tablet.jpg");
 
@@ -30,7 +31,7 @@
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/welcome-background-tablet@2x.jpg");
-      background-size: 768px auto;
+      background-size: @tablet-width auto;
 
       @supports (background-image: url("../img/welcome-background-tablet@2x.webp")) {
         background-image: url("../img/welcome-background-tablet@2x.webp");
@@ -60,7 +61,7 @@
 .welcome__image {
   position: relative;
   margin-top: 90px;
-  margin-bottom: 90px;
+  margin-bottom: 79px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 240px;
@@ -74,6 +75,9 @@
   font-size: 18px;
   line-height: 26px;
   text-transform: uppercase;
+  background-color: #ffffff;
+  margin: 0;
+  padding: 25px 0;
 
   @media (min-width: @tablet-width) {
     font-size: 21px;

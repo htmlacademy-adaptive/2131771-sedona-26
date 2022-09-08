@@ -1,12 +1,10 @@
 .map {
   margin: 0 auto;
-  margin-top: 50px;
   display: flex;
   justify-content: center;
 
   @media (min-width: @tablet-width) {
     width: 768px;
-    margin-top: 58px;
   }
 
   @media (min-width: @desktop-width) {
@@ -17,6 +15,7 @@
 .map__wrapper {
   width: 320px;
   height: 350px;
+  box-shadow: 0 10px 15px rgba(0, 1, 1, 0.2);
 
   @media (min-width: @tablet-width) {
     width: @tablet-width;
