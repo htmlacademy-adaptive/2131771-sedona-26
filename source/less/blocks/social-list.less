@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   gap: 6px;
-  margin: 0 80px;
+  margin-top: 30px;
 
   @media (min-width: @tablet-width) {
     margin: 0;
@@ -14,14 +14,23 @@
 
 .social-list__item {
   list-style-type: none;
+  background-color: #81b3d2;
+  --fillColor: #ffffff;
+
+  &:hover {
+    background-color: #669ec0;
+  }
+
+  &:active .social-list__link {
+    background-color: #5496bd;
+    --fillColor: rgba(255, 255, 255, 0.3);
+  }
 }
 
 .social-list__link {
-  display: flex;
-  list-style-type: none;
-  background-color: #81b3d2;
   width: 54px;
   height: 48px;
+  display: flex;
   align-items: center;
   justify-content: center;
 }

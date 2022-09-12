@@ -30,6 +30,18 @@
   color: #ffffff;
   border-top: 1px solid #81b3d2;
 
+  &:hover {
+    background-color: #669ec0;
+  }
+
+  &:active {
+    background-color: #5496bd;
+  }
+
+  &:disabled {
+    background-color: #e5e5e5;
+  }
+
   &:not(:last-child) {
     border-bottom: 1px solid #678fa8;
 
@@ -59,6 +71,19 @@
     &:nth-child(2) {
       margin-right: 180px;
     }
+
+    &:hover {
+      background-color: #ffffff;
+      // color: #81b3d2;
+    }
+
+    &:active {
+      background-color: transparent;
+    }
+
+    &:disabled {
+      background-color: transparent;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -75,33 +100,94 @@
   font-size: 18px;
   line-height: 26px;
 
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &:disabled {
+    color: #ffffff;
+  }
+
   @media (min-width: @tablet-width) {
     font-size: 14px;
     line-height: 21px;
     color: #000000;
+
+    &:hover {
+      color: #81b3d2;
+    }
+
+    &:active {
+      color: #b2b2b2;
+    }
   }
 }
 
+.current {
+  @media (min-width: @tablet-width) {
+    color: #766357;
+
+    &:hover {
+      color: #766357;
+    }
+
+    &:active {
+      color: #766357;
+    }
+  }
+}
+
+  & .main-nav__cross-image {
+    display: block;
+    z-index: 4;
+    position: absolute;
+    top: 5px;
+    left: 270px;
+    padding: 10px;
+  }
+
 .main-nav--opened {
   & .main-nav__toggle {
+    z-index: 8;
     width: 22px;
     height: 22px;
     position: absolute;
-    top: 10px;
-    left: 271px;
+    top: 15px;
+    left: 280px;
     padding: 10px;
-    margin: 7px 10px;
-    background-image: url("../img/icon-cross.svg");
-    background-color: #81b3d2;
-    z-index: 3;
+    background-color: transparent;
   }
 
   & .main-nav-list {
     z-index: 2;
   }
 
+  & .main-nav__burger-image {
+    display: none;
+  }
+
   @media (min-width: @tablet-width) {
     display: none;
+  }
+}
+
+.main-nav__burger-image {
+  &:hover {
+    fill: #b3d1e4;
+  }
+
+  &:active {
+    fill: #d9e8f2;
+  }
+}
+
+.main-nav__cross-image {
+  &:hover {
+    fill: #cde1ed;
+  }
+
+  &:active {
+    fill: #a7cae0;
   }
 }
 
@@ -111,16 +197,18 @@
     display: block;
     width: 22px;
     height: 22px;
-    top: 10px;
-    left: 271px;
+    top: 6px;
+    left: 269px;
     padding: 10px;
-    margin: 7px 10px;
-    background-image: url("../img/icon-menu-burger.svg");
     background-color: #ffffff;
-    cursor: pointer;
+    z-index: 1;
   }
 
   & .main-nav-list {
+    display: none;
+  }
+
+  & .main-nav__cross-image {
     display: none;
   }
 
