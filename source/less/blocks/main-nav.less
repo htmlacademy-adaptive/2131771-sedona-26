@@ -30,11 +30,27 @@
 
 .main-nav__toggle {
   border: 0;
+
+  & .main-nav__burger-icon:hover {
+    fill: #b3d1e4;
   }
 
-  @media (min-width: @tablet-width) {
-    display: none;
+  & .main-nav__burger-icon:active {
+    fill: #d9e8f2;
   }
+
+  & .main-nav__cross-icon:hover {
+    fill: #cde1ed;
+  }
+
+  & .main-nav__cross-icon:active {
+    fill: #a7cae0;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  display: none;
+}
 
 .main-nav--nojs {
   display: none;
