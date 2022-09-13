@@ -7,7 +7,7 @@
   &::after {
     position: absolute;
     width: 320px;
-    height: 57px;
+    height: 60px;
     top: 388px;
     left: 0;
     background-image: url("../img/white-triangle-mobile.svg");
@@ -16,7 +16,7 @@
 
     @media (min-width: @tablet-width) {
       width: @tablet-width;
-      top: 520px;
+      top: 517px;
       left: 0;
       background-image: url("../img/white-trianlge-tablet.svg");
     }
@@ -31,9 +31,25 @@
 .main-nav__toggle {
   border: 0;
 
-  @media (min-width: @tablet-width) {
-    display: none;
+  &:hover .main-nav__burger-icon {
+    fill: #b3d1e4;
   }
+
+  &:active .main-nav__burger-icon {
+    fill: #d9e8f2;
+  }
+
+  &:hover .main-nav__cross-icon {
+    fill: #cde1ed;
+  }
+
+  &:active .main-nav__cross-icon {
+    fill: #a7cae0;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  display: none;
 }
 
 .main-nav--nojs {

@@ -1,10 +1,28 @@
 .developed-by {
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 320px;
-  margin-top: 47px;
+  margin-top: 30px;
+  margin-bottom: 30px;
   text-decoration: none;
   color: #000000;
+
+  &:hover {
+    color: #81b3d2;
+  }
+
+  &:hover .developed-by__icon {
+    fill: #81b3d2;
+  }
+
+  &:active {
+    color: #b3b3b3;
+  }
+
+  &:active .developed-by__icon {
+    fill: #b3b3b3;
+  }
 
   @media (min-width: @tablet-width) {
     width: 33%;
@@ -15,12 +33,14 @@
 }
 
 .developed-by__text {
+  display: block;
   font-style: normal;
   font-size: 14px;
   line-height: 21px;
   text-transform: uppercase;
 }
 
-.developed-by__image {
+.developed-by__icon {
+  display: block;
   margin: 13px;
 }
