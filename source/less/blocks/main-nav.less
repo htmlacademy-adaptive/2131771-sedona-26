@@ -16,13 +16,14 @@
 
     @media (min-width: @tablet-width) {
       width: @tablet-width;
-      top: 517px;
+      top: 509px;
       left: 0;
       background-image: url("../img/white-trianlge-tablet.svg");
     }
 
     @media (min-width: @desktop-width) {
       width: @desktop-width;
+      top: 511px;
       background-image: url("../img/white-triangle-desktop.svg");
     }
   }
@@ -53,5 +54,15 @@
 }
 
 .main-nav--nojs {
-  display: none;
+  & .main-nav__toggle,
+  .main-nav__burger-icon,
+  .main-nav__cross-icon {
+    display: none;
+  }
+  & .main-nav-list {
+    display: block;
+    position: static;
+    z-index: 6;
+  }
+
 }
