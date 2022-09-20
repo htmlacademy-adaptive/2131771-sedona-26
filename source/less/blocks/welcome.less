@@ -1,11 +1,37 @@
 .welcome {
   grid-row-start: 2;
+  position: relative;
   width: 320px;
   margin: 0 auto;
   text-align: center;
   background-image: url("../img/welcome-background.jpg");
   background-repeat: no-repeat;
   box-shadow: 0 0 15px rgba(0, 1, 1, 0.2);
+  z-index: -1;
+
+  &::after {
+    position: absolute;
+    width: 320px;
+    height: 60px;
+    top: 332px;
+    left: 0;
+    background-image: url("../img/white-triangle-mobile.svg");
+    background-repeat: no-repeat;
+    content: "";
+
+    @media (min-width: @tablet-width) {
+      width: @tablet-width;
+      top: 453px;
+      left: 0;
+      background-image: url("../img/white-trianlge-tablet.svg");
+    }
+
+    @media (min-width: @desktop-width) {
+      width: @desktop-width;
+      top: 455px;
+      background-image: url("../img/white-triangle-desktop.svg");
+    }
+  }
 
   @supports (background-image: url("../img/welcome-background.webp")) {
     background-image: url("../img/welcome-background.webp");

@@ -3,30 +3,7 @@
   display: flex;
   justify-content: right;
   margin: 0 auto;
-
-  &::after {
-    position: absolute;
-    width: 320px;
-    height: 60px;
-    top: 388px;
-    left: 0;
-    background-image: url("../img/white-triangle-mobile.svg");
-    background-repeat: no-repeat;
-    content: "";
-
-    @media (min-width: @tablet-width) {
-      width: @tablet-width;
-      top: 509px;
-      left: 0;
-      background-image: url("../img/white-trianlge-tablet.svg");
-    }
-
-    @media (min-width: @desktop-width) {
-      width: @desktop-width;
-      top: 511px;
-      background-image: url("../img/white-triangle-desktop.svg");
-    }
-  }
+  height: 56px;
 }
 
 .main-nav__toggle {
